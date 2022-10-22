@@ -14,7 +14,7 @@ contract CryptoDevs is ERC721Enumerable, Ownable {
 
     // 如果紧急事件发生就停止合约
     bool public _paused;
-    // CryptoDevs的最大值
+    // CryptoDevs的总数
     uint256 public maxTokenIds = 20;
 
     // 已经被mint的tokenId的总数
@@ -34,7 +34,7 @@ contract CryptoDevs is ERC721Enumerable, Ownable {
         _;
     }
 
-    // ERC2=721结构需要给代币集合一个名字和符号
+    // ERC721结构需要给代币集合一个名字和符号
     // 在本例中 名字Crypto Devs 符号CD
     constructor(string memory baseURI, address whitelistContract)
         ERC721("Crypto Devs", "CD")
